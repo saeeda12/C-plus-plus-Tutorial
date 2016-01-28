@@ -16,6 +16,9 @@
 5. C++ is primarily used in finance (high-performance applications), video games, high-performance embedded and real-time systems, transportation (traffic light signal systems), manufacture, and other industries where precision is important.
       - http://programmers.stackexchange.com/questions/61248/what-is-the-role-of-c-today
 
-6. The top three most popular posts on GitHub when searching C++ include: cocos2d/cocos2d-x (cocos2d-x for C++) with 7,327 stars, facebook/folly (An open-source C++ library developed and used at Facebook.) with 6,071 stars, and openframeworks/openFrameworks (openFrameworks is a community-developed cross platform toolkit for creative coding in C++.) with 4,089 stars. 
+6. The top three most popular posts on GitHub when searching C++ include: 
+      - cocos2d/cocos2d-x (cocos2d-x for C++) with 7,327 stars
+      - facebook/folly (An open-source C++ library developed and used at Facebook.) with 6,071 stars             
+      - openframeworks/openFrameworks (openFrameworks is a community-developed cross platform toolkit for creative coding in             C++.) with 4,089 stars
 
-7. To learn and become proficient in C++, I will use *C++ Programming: For the Absolute Beginner* (2nd ed) by Michael Vine, this [C++ Tutorial website](http://www.cprogramming.com/tutorial/lesson1.html), in addition to the C++ Essential Training videos, among many more, available on lynda.com. 
+7. To learn and become proficient in C++, I will use *C++ Programming: For the Absolute Beginner* (2nd ed) by Michael Vine, this [C++ Tutorial website](http://www.cprogramming.com/tutorial/lesson1.html), in addition to the C++ Essential Training by Bill Weinman, among many more videos, available on lynda.com. 
