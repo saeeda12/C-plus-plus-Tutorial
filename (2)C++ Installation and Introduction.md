@@ -1,6 +1,8 @@
 ##C++ Installation and Programming Environment
 **Amal Saeed**
 
+
+
 1. C++ can be installed on any operating system - Windows, Mac, or Unix/Linux.
 
 2. First, we will need to install a compiler, as C++ is a compiled language. The most popular compiler is the GNU C/C++ Compiler. To install GCC on a Windows machine you need to install MinGW. To install MinGW, go to the [MinGW homepage](www.mingw.org), and follow the link to the MinGW download page. Download the latest version of the MinGW installation program, which should be named MinGW-<version>.exe. While installing MinGW, at a minimum, you must install gcc-core, gcc-g++, binutils, and the MinGW runtime, but you may wish to install more. Add the bin subdirectory of your MinGW installation to your PATH environment variable so that you can specify these tools on the command line by their simple names. When the installation is complete, you will be able to run gcc, g++, ar, ranlib, dlltool, and several other GNU tools from the Windows command line.
@@ -22,6 +24,11 @@ If GCC is not installed, then you will have to install it yourself using the det
 
 5. There is not a lot of boiler-plate code that you need to write in order to write a program, at least not as much as in Java.
     Here is a sample program - the first two lines are mandatory, as is int main(): 
-`#include <iostream>using namespace std;int main() {cout << "Hello world!";return 0;}`
+`#include <iostream>
+using namespace std;
+int main() {
+    cout << "Hello world!";
+    return 0;
+}`
 
 6. In C++, comments are written the same way as in Java. With two slashes: //this is a comment.
