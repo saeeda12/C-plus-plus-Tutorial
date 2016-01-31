@@ -20,10 +20,10 @@ If GCC is not installed, then you will have to install it yourself using the det
 3. Next, choose a text editor to type your programs in - for example, Notepad on Windows, TextEdit or TextWrangler for Mac, and vi or vim for Unix/Linux. You can save these files with .cpp, .cp or .c extensions.
     a. C++ does not come with a recommended programming environment.
 
-4. In Xcode, I can write all of my programs in the application. Go to File -> New Project, then click on Application under OS X, then choose Command Line Tool and hit next. And then you can name the project, and choose which language you would like to program in (Swift, Objective-C, C++, or C). This creates a folder, and a main.cpp file already written in C++ that executes a "Hello World!"; you can write your C++ code in the folder, as well as create new files. 
+4. In Xcode, I can write all of my programs in the application. Go to File -> New Project, then click on Application under OS X, then choose Command Line Tool and hit next. And then you can name the project, and choose which language you would like to program in (Swift, Objective-C, C++, or C). This creates a folder, and a main.cpp file already written in C++ that executes a "Hello World!"; you can write your C++ code in the folder, as well as create new files. After writing the program, there is a play button in the upper right of Xcode that builds and then executes the program. If there are problems in the program, it will say Build Failed and highlight where there are errors.
 
-5. There is not a lot of boiler-plate code that you need to write in order to write a program, at least not as much as in Java.
-    Here is a sample program - the first two lines are mandatory, as is int main():
+5. There is not a lot of boiler-plate code that you need to write in order to write a program, at least not as much as in Java. It needs a header, in the program pasted below, that header is <iostream> and the pound # sign at the beginning of the line targets the compiler's pre-processor; `#include` tells the processor to include the <iostream> header. The `using namespace std;` line tells the compiler to use the standard namespace. And program execution begins with the main function `int main()`.
+    Here is a sample program:
 `#include <iostream>
 using namespace std;
 int main() {
