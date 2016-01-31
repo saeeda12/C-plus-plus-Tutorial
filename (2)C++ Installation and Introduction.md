@@ -23,7 +23,7 @@ If GCC is not installed, then you will have to install it yourself using the det
 4. In Xcode, I can write all of my programs in the application. Go to File -> New Project, then click on Application under OS X, then choose Command Line Tool and hit next. And then you can name the project, and choose which language you would like to program in (Swift, Objective-C, C++, or C). This creates a folder, and a main.cpp file already written in C++ that executes a "Hello World!"; you can write your C++ code in the folder, as well as create new files. 
 
 5. There is not a lot of boiler-plate code that you need to write in order to write a program, at least not as much as in Java.
-    Here is a sample program - the first two lines are mandatory, as is int main(): 
+    Here is a sample program - the first two lines are mandatory, as is int main():
 `#include <iostream>
 using namespace std;
 int main() {
