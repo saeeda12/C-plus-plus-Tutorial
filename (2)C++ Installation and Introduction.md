@@ -22,11 +22,11 @@ If GCC is not installed, then you will have to install it yourself using the det
 
 5. There is not a lot of boiler-plate code that you need to write in order to write a program, at least not as much as in Java.
     Here is a sample program - the first two lines are mandatory, as is int main(): 
-'#'include <iostream>
+`#include <iostream>
 using namespace std;
 int main() {
   cout << "Hello world!";
   return 0;
-}
+}`
 
 6. In C++, comments are written the same way as in Java. With two slashes: //this is a comment.
