@@ -31,4 +31,4 @@ int main() {
     return 0;
 }`
 
-6. In C++, comments are written the same way as in Java - with two slashes: `//this is a single-line comment` and '/*this is a multi-line comment.*/`.
+6. In C++, comments are written the same way as in Java - with two slashes: `//this is a single-line comment` and '/*this is a multi-line comment./`
