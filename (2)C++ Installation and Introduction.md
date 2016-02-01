@@ -14,7 +14,7 @@ Configured with: ../configure --prefix=/usr .......
 Thread model: posix
 gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)
 If GCC is not installed, then you will have to install it yourself using the detailed instructions available [here](http://gcc.gnu.org/install/).
-    I have a Mac, so all I needed to do was install Xcode from the App Store, which includes the Xcode IDE and a compiler. There is also another free tool called [Code::Blocks](http://www.codeblocks.org/) which includes both an IDE and a compiler, and id available for Windows, Linux, and Mac. Click the downloads link, choose "Download the binary release" and then choose your OS and download the setup file.
+    I have a Mac, so all I needed to do was install Xcode from the App Store, which includes the Xcode IDE and a compiler. There is also another free tool called [Code::Blocks](http://www.codeblocks.org/) which includes both an IDE and a compiler, and id available for Windows, Linux, and Mac. Click on the downloads tab, choose "Download the binary release" and then choose your OS and download the setup file.
       - http://www.tutorialspoint.com/cplusplus/cpp_environment_setup.htm
 
 3. Next, choose a text editor to type your programs in as your IDE (integrated development environment) - for example, Notepad on Windows, TextEdit or TextWrangler for Mac, and vi or vim for Unix/Linux. You can save these files with .cpp, .cp or .c extensions.
