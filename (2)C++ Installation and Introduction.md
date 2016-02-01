@@ -17,7 +17,7 @@ If GCC is not installed, then you will have to install it yourself using the det
     I have a Mac, so all I needed to do was install Xcode from the App Store, which includes the Xcode IDE and a compiler. 
       - http://www.tutorialspoint.com/cplusplus/cpp_environment_setup.htm
 
-3. Next, choose a text editor to type your programs in - for example, Notepad on Windows, TextEdit or TextWrangler for Mac, and vi or vim for Unix/Linux. You can save these files with .cpp, .cp or .c extensions.
+3. Next, choose a text editor to type your programs in as your IDE (integrated development environment) - for example, Notepad on Windows, TextEdit or TextWrangler for Mac, and vi or vim for Unix/Linux. You can save these files with .cpp, .cp or .c extensions.
     a. C++ does not come with a recommended programming environment.
 
 4. In Xcode, I can write all of my programs in the application. Go to File -> New Project, then click on Application under OS X, then choose Command Line Tool and hit next. And then you can name the project, and choose which language you would like to program in (Swift, Objective-C, C++, or C). This creates a folder, and a main.cpp file already written in C++ that executes a "Hello World!"; you can write your C++ code in the folder, as well as create new files. After writing the program, there is a play button in the upper right of Xcode that builds and then executes the program. If there are problems in the program, it will say Build Failed and highlight where there are errors.
