@@ -14,7 +14,7 @@ Configured with: ../configure --prefix=/usr .......
 Thread model: posix
 gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)
 If GCC is not installed, then you will have to install it yourself using the detailed instructions available [here](http://gcc.gnu.org/install/).
-    Because I have a Mac, all I needed to do was install Xcode from the App Store, which includes the Xcode IDE and a compiler. 
+    I have a Mac, so all I needed to do was install Xcode from the App Store, which includes the Xcode IDE and a compiler. 
       - http://www.tutorialspoint.com/cplusplus/cpp_environment_setup.htm
 
 3. Next, choose a text editor to type your programs in - for example, Notepad on Windows, TextEdit or TextWrangler for Mac, and vi or vim for Unix/Linux. You can save these files with .cpp, .cp or .c extensions.
@@ -31,4 +31,4 @@ int main() {
     return 0;
 }`
 
-6. In C++, comments are written the same way as in Java. With two slashes: //this is a comment.
+6. In C++, comments are written the same way as in Java - with two slashes: //this is a comment.
