@@ -20,7 +20,7 @@ If GCC is not installed, then you will have to install it yourself using the det
 
 - Source: http://www.tutorialspoint.com/cplusplus/cpp_environment_setup.htm
 
-**MAC:** I have a Mac, so all I needed to do was install Xcode from the App Store, which includes the Xcode IDE and a compiler. There is also another free tool called [Code::Blocks](http://www.codeblocks.org/) which includes both an IDE and a compiler, and is available for *Windows, Linux, and Mac*. Click on the downloads tab, choose "Download the binary release" and then choose your OS and download the setup file.
+**MAC:** I have a Mac, so all I needed to do was install Xcode from the App Store, which includes the Xcode IDE and a compiler. There is also another free tool called [Code::Blocks](http://www.codeblocks.org/) which includes both an IDE and a compiler, and is available for Windows, Linux, *and* Mac. Click on the downloads tab, choose "Download the binary release" and then choose your OS and download the setup file.
 
 Next, choose a text editor to type your programs in as your IDE (integrated development environment) - for example, Notepad on Windows, TextEdit or TextWrangler for Mac, and vi or vim for Unix/Linux. You can save these files with .cpp, .cp or .c extensions. By the way, C++ does *not* come with a recommended programming environment.
 
