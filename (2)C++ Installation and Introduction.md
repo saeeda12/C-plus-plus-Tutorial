@@ -10,18 +10,26 @@ First, we will need to install a compiler, as C++ is a compiled language. The mo
 
 **WINDOWS:** To install GCC on a Windows machine you need to install MinGW - a minimalist development environment for native Microsoft Windows applications. To install MinGW, go to the [MinGW homepage](www.mingw.org), and follow the link to the MinGW download page. Download the latest version of the MinGW installation program, which should be named MinGW-<version>.exe. While installing MinGW, at a minimum, you must install gcc-core, gcc-g++, binutils, and the MinGW runtime, but you may wish to install more. Add the bin subdirectory of your MinGW installation to your PATH environment variable so that you can specify these tools on the command line by their simple names. When the installation is complete, you will be able to run gcc, g++, ar, ranlib, dlltool, and several other GNU tools from the Windows command line.
 
-**LINUX/ UNIX:** If you are using Linux or UNIX then check whether GCC is installed on your system by entering the following command from the command line: $ g++ -v . If you have installed GCC, then it should print a message such as the following:
-Using built-in specs.
-Target: i386-redhat-linux1Configured with: ../configure --prefix=/usr .......
-Thread model: posix1gcc1version 4.1.2 20080704 (Red Hat 4.1.2-46)  
+**LINUX/ UNIX:** If you are running Linux or UNIX, check whether GCC is installed on your system by entering the following command from the command line: `$ g++ -v` . If you have installed GCC, then it should print a similar message:
+`Using built-in specs.`
+`Target: i386-redhat-linux1Configured with: ../configure --prefix=/usr .......`
+`Thread model: posix1gcc1version 4.1.2 20080704 (Red Hat 4.1.2-46)`
 
-If GCC is not installed, then you will have to install it yourself using the detailed instructions available [here](http://gcc.gnu.org/install/). 
+If GCC is not installed, then you will have to install it yourself via the command line. You can enter:  
+`sudo apt-get install build-essential`
+OR
+`$ sudo yum group install "Development Tools"`
+
+If above command failed, try:
+`# yum groupinstall "Development Tools"`
 
 Sources:
 
 - http://www.tutorialspoint.com/cplusplus/cpp_environment_setup.htm
 - https://gcc.gnu.org/wiki/FAQ?highlight=%28%28InstallingGCC%29%29
 - http://www.mingw.org
+- http://www.cyberciti.biz/faq/centos-rhel-7-redhat-linux-install-gcc-compiler-development-tools/
+- http://crybit.com/how-to-install-gcc-gnu-c-c-compiler-unixlinux/
 
 **MAC:** I have a Macbook, so all I needed to do was install Xcode (the latest non-beta version is 7.2.1) from the App Store, which includes the Xcode IDE and a compiler. There is also another free tool called [Code::Blocks](http://www.codeblocks.org/) which includes both an IDE and a compiler, and is available for Windows, Linux, *and* Mac. Click on the downloads tab, choose "Download the binary release" and then choose your OS and download the setup file.
 
