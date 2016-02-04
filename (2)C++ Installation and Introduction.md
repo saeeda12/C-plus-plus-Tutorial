@@ -17,7 +17,7 @@ First, we will need to install a compiler, as C++ is a compiled language. The mo
 
 If GCC is not installed, then you will have to install it yourself via the command line. You can enter: 
 `sudo apt-get install build-essential` 
-OR  
+OR
 `$ sudo yum group install "Development Tools"`
 
 If the last command failed, type in: 
