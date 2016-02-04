@@ -6,16 +6,14 @@
 
 In this second addition to learning C++, we will learn how to install C++ so we can write and execute programs in the language. C++ can be installed on any operating system - Windows, Mac, or Unix/Linux. 
 
-First, we will need to install a compiler, as C++ is a compiled language. The most popular compiler is the GNU C/C++ Compiler. 
+First, we will need to install a compiler, as C++ is a compiled language. The most popular compiler is the GNU C/C++ (GCC) Compiler. 
 
 **WINDOWS:** To install GCC on a Windows machine you need to install MinGW. To install MinGW, go to the [MinGW homepage](www.mingw.org), and follow the link to the MinGW download page. Download the latest version of the MinGW installation program, which should be named MinGW-<version>.exe. While installing MinGW, at a minimum, you must install gcc-core, gcc-g++, binutils, and the MinGW runtime, but you may wish to install more. Add the bin subdirectory of your MinGW installation to your PATH environment variable so that you can specify these tools on the command line by their simple names. When the installation is complete, you will be able to run gcc, g++, ar, ranlib, dlltool, and several other GNU tools from the Windows command line.
 
-**LINUX/UNIX:** If you are using Linux or UNIX then check whether GCC is installed on your system by entering the following command from the command line: $ g++ -v . If you have installed GCC, then it should print a message such as the following:
-Using built-in specs.
-Target: i386-redhat-linux
-Configured with: ../configure --prefix=/usr .......
-Thread model: posix
-gcc version 4.1.2 20080704 (Red Hat 4.1.2-46)
+**LINUX/ UNIX:** If you are using Linux or UNIX then check whether GCC is installed on your system by entering the following command from the command line: $ g++ -v . If you have installed GCC, then it should print a message such as the following:1
+Using built-in specs.1 
+Target: i386-redhat-linux1Configured with: ../configure --prefix=/usr .......1 
+Thread model: posix1gcc1version 4.1.2 20080704 (Red Hat 4.1.2-46)1  
 If GCC is not installed, then you will have to install it yourself using the detailed instructions available [here](http://gcc.gnu.org/install/). 
 
 - Source: http://www.tutorialspoint.com/cplusplus/cpp_environment_setup.htm
