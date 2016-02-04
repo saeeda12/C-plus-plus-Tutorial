@@ -20,18 +20,18 @@ If GCC is not installed, then you will have to install it yourself via the comma
 OR
 `$ sudo yum group install "Development Tools"`
 
-If above command failed, try:
+If above command failed, type in: 
 `# yum groupinstall "Development Tools"`
 
-Sources:
 
+Sources:
 - http://www.tutorialspoint.com/cplusplus/cpp_environment_setup.htm
 - https://gcc.gnu.org/wiki/FAQ?highlight=%28%28InstallingGCC%29%29
 - http://www.mingw.org
 - http://www.cyberciti.biz/faq/centos-rhel-7-redhat-linux-install-gcc-compiler-development-tools/
 - http://crybit.com/how-to-install-gcc-gnu-c-c-compiler-unixlinux/
 
-**MAC:** I have a Macbook, so all I needed to do was install Xcode (the latest non-beta version is 7.2.1) from the App Store, which includes the Xcode IDE and a compiler. There is also another free tool called [Code::Blocks](http://www.codeblocks.org/) which includes both an IDE and a compiler, and is available for Windows, Linux, *and* Mac. Click on the downloads tab, choose "Download the binary release" and then choose your OS and download the setup file.
+**MAC:** I have a Macbook, so all I needed to do was install Xcode (the latest non-beta version: 7.2.1) from the App Store, which includes the Xcode IDE and a compiler. There is also another free tool called [Code::Blocks](http://www.codeblocks.org/) which includes both an IDE and a compiler, and is available for Windows, Linux, *and* Mac. Click on the downloads tab, choose "Download the binary release" and then choose your OS and download the setup file.
 
 Next, choose a text editor to type your programs in as your IDE (integrated development environment) - for example, Notepad on Windows, TextEdit or TextWrangler for Mac, and vi or vim for Unix/Linux. You must save your C++ files with .cpp, .cp or .c extensions. By the way, C++ does *not* come with a recommended programming environment.
 
