@@ -15,12 +15,12 @@ First, we will need to install a compiler, as C++ is a compiled language. The mo
 `Target: i386-redhat-linux1Configured with: ../configure --prefix=/usr .......`
 `Thread model: posix1gcc1version 4.1.2 20080704 (Red Hat 4.1.2-46)`
 
-If GCC is not installed, then you will have to install it yourself via the command line. You can enter:  
-`sudo apt-get install build-essential`
-OR
+If GCC is not installed, then you will have to install it yourself via the command line. You can enter: 
+`sudo apt-get install build-essential` 
+OR  
 `$ sudo yum group install "Development Tools"`
 
-If above command failed, type in: 
+If the last command failed, type in: 
 `# yum groupinstall "Development Tools"`
 
 
