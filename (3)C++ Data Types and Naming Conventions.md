@@ -33,5 +33,5 @@ If you want to do the previous two steps in one line, it is called **initializin
 ```
 int x = 5;
 ```
-
+It is important to note the data types that can be manipulated together. For example, you cannot add a char type to an int: `x = "5" + 6;` because you have to define the variable, so if it is now `int x = "5" + 6;` it still cannot be even compiled because it throws the error that adding 'int' to a string does append to the string, and it gives the same error if I assign x to a char data type.
 
