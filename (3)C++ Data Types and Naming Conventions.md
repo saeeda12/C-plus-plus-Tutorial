@@ -18,7 +18,7 @@ Now, in order to name a variable, called the **identifier**, the following rules
 3. Identifiers can be as long as you want
 4. You can't use any keywords as variable names (like int)
 5. C++ *is* case-sensitive (Num is different than num)
-  Beyond these base rules, you should keep in mind that identifiers should be descriptive, and useful to its purpose in your program. Also, do not start your identifiers with two underscores as they are often reserved for special system variables.
+  Beyond these base rules, you should keep in mind that identifiers should be descriptive, and useful to its purpose in your program. Variable names are usually, in best practice, all lowercase, but camel case is used for combined words (i.e. variableName). Also, do not start your identifiers with two underscores as they are often reserved for special system variables.
 
 The syntax for declaring variables is `variable_type identifier;`. Make sure your statements always end in a semicolon!
 ```
