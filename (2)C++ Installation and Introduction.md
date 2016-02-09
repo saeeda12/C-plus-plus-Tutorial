@@ -12,23 +12,23 @@ First, we will need to install a compiler, as C++ is a compiled language. The mo
 
 **LINUX/ UNIX:** If you are running Linux or UNIX, check whether GCC is installed on your system by entering the following command from the command line: `$ g++ -v` . If you have installed GCC, then it should print a similar message:
 ``````
-`Using built-in specs.`
-`Target: i386-redhat-linux1Configured with: ../configure --prefix=/usr .......`
-`Thread model: posix1gcc1version 4.1.2 20080704 (Red Hat 4.1.2-46)`
+Using built-in specs.
+Target: i386-redhat-linux1Configured with: ../configure --prefix=/usr .......
+Thread model: posix1gcc1version 4.1.2 20080704 (Red Hat 4.1.2-46)
 ``````
 
 If GCC is not installed, then you will have to install it yourself via the command line. You can enter: 
 ```
-`sudo apt-get install build-essential` 
+sudo apt-get install build-essential`
 ```
 OR
 ````
-`$ sudo yum group install "Development Tools"`
+$ sudo yum group install "Development Tools"
 `````
 
 If the last command failed, type in: 
 ````
-`# yum groupinstall "Development Tools"`
+# yum groupinstall "Development Tools"
 `````
 
 
@@ -49,12 +49,12 @@ There is not a lot of boiler-plate code that you need to write in order to write
 
 Here is a sample program:
 `````
-`#include <iostream>`
-`using namespace std;`
-`int main() {`
-    `cout << "Hello world!";`
-    `return 0;`
-`}`
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "Hello world!";
+    return 0;
+}
 `````
 
 In C++, comments are written the same way as in Java: `//this is a single-line comment` and `/*this is a multi-line comment.*/`
