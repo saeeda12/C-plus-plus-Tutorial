@@ -21,7 +21,7 @@ Now, in order to name a variable, called the **identifier**, the following rules
 - Every other character can be a letter, underscore, or number  
 - Identifiers can be as long as you want  
 - You can't use any keywords as variable names (like int, string, etc.)
-- C++ *is* case-sensitive (Num is different than num)
+- C++ *is* case-sensitive (`Num` is different than `num`)
 
   Beyond these base rules, you should keep in mind that identifiers should be descriptive, practical, and useful to its purpose in your program. Variable names are usually, in best practice, all lowercase, but camel case (i.e. variableName) or Pascal case (i.e. VariableName) can be used for multiple word names; these rules are enforced by programmers, to make variable names easier to read and understand. Also, do not start your identifiers with two underscores as they are often reserved for special system variables - this is enforced by the rules of C++ as it will throw an error.
 
@@ -78,6 +78,21 @@ These data types can hold a real number, like 420.0 -3.33 or 0.03324, and can ha
 double temp = 4.21; //Double is 8 bytes long
 float cel = 32.2; //Float is 4 bytes long
 ```
+
+**Arrays**   
+They are used to store a collection of variables of the same type.
+```
+int myArr[5]; //Declare the type, int, and size, 5, of the array, a
+int myArr[5] = {12, 47, 66, 71, 84}; //Initialize the array a, with five integers inside the braces
+
+int b[] = {11, 45, 62, 70, 88}; //Without initializing the size, the array is created just big enough to hold the values
+
+cout<< b[0]<< endl; //Outputs 11, as 11 is the 0th index of array b. Index in arrays always starts at 0.
+b[2] = 24;  //Assigns the value of 42 to the third element in the array b - 62 is now 42
+```
+
+**Hash**
+
 
 It is important to note the data types that can be manipulated together. For example, you cannot add a char type to an int: `x = "5" + 6;` because you have to define the variable, so if it is now `int x = "5" + 6;` it still cannot be even compiled because it throws the error that adding 'int' to a string does append to the string, and it gives the same error if I assign x to a char data type.
 
