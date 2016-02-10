@@ -10,17 +10,19 @@ Let's start with variables!
 
 A **variable** reserves a memory location in your computer which represents and stores a value for use in your program. All variables have an **identifier** - the name by which it is referred to, its **type** - which defines which operations can be performed on the variable, and the **data** it holds.
 
-The C++ compiler requires us to provide the data type for *each* variable declared. The four basic types of variables are:  1. Boolean
-2. Character (surrounded by single quotes '')/ String (surrounded by double quotes "")
-3. Integer (short, long, signed, unsigned) 
-4. Floating-point types (float, double, long double)
+The C++ compiler requires us to provide the data type for *each* variable declared. The four basic types of variables are:  
+- Boolean
+- Character (surrounded by single quotes '')/ String (surrounded by double quotes "")
+- Integer (surrounded by single quotes '')/ String (surrounded by double quotes "")
+- Floating point (float, double, long double)
 
-Now, in order to name a variable, called the **identifier**, the following rules must be followed:
-1. The name must start with a letter or underscore _
-2. Every other character can be a letter, underscore, or number
-3. Identifiers can be as long as you want
-4. You can't use any keywords as variable names (like int)
-5. C++ *is* case-sensitive (Num is different than num)
+Now, in order to name a variable, called the **identifier**, the following rules must be followed:   
+- The name must start with a letter or underscore (_)  
+- Every other character can be a letter, underscore, or number  
+- Identifiers can be as long as you want  
+- You can't use any keywords as variable names (like int, string, etc.)
+- C++ *is* case-sensitive (Num is different than num)
+
   Beyond these base rules, you should keep in mind that identifiers should be descriptive, practical, and useful to its purpose in your program. Variable names are usually, in best practice, all lowercase, but camel case (i.e. variableName) or Pascal case (i.e. VariableName) can be used for multiple word names; these rules are enforced by programmers, to make variable names easier to read and understand. Also, do not start your identifiers with two underscores as they are often reserved for special system variables - this is enforced by the rules of C++ as it will throw an error.
 
 The syntax for declaring variables is `variable_type identifier;`. Make sure your statements always end in a semicolon!
