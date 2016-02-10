@@ -1,6 +1,7 @@
 #C++ Data Types and Naming Conventions
 
-####Amal Saeed
+####Amal Saeed     
+
 
 
 In this tutorial, we will be experimenting with how different data types are represented and manipulated in C++. I will be writing all of my C++ code in Xcode.
