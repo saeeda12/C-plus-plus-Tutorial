@@ -21,8 +21,8 @@ Now, in order to name a variable, called the **identifier**, the following rules
 - The name must start with a letter or underscore (_)  
 - Every other character can be a letter, underscore, or number  
 - Identifiers can be as long as you want  
-- You can't use any keywords as variable names (like int, string, etc.)
-- C++ *is* case-sensitive (`Num` is different than `num`)
+- You can't use any keywords as variable names (such as int, string, etc.)   
+- C++ *is* case-sensitive (`num` is different from `Num`)
 
   Beyond these base rules, you should keep in mind that identifiers should be descriptive, practical, and useful to its purpose in your program. Variable names are usually, in best practice, all lowercase, but camel case (i.e. variableName) or Pascal case (i.e. VariableName) can be used for multiple word names; these rules are enforced by programmers, to make variable names easier to read and understand. Also, do not start your identifiers with two underscores as they are often reserved for special system variables - this is enforced by the rules of C++ as it will throw an error.
 
