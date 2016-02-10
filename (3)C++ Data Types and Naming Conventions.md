@@ -10,7 +10,10 @@ Let's start with variables!
 
 A **variable** reserves a memory location in your computer which represents and stores a value for use in your program. All variables have an **identifier** - the name by which it is referred to, its **type** - which defines which operations can be performed on the variable, and the **data** it holds.
 
-The C++ compiler requires us to provide the data type for *each* variable declared. The four basic types of variables are: Boolean, character (surrounded by single quotes ''), string (surrounded by double quotes ""), integer (short, long, signed, unsigned), and floating-point types (float, double, long double).
+The C++ compiler requires us to provide the data type for *each* variable declared. The four basic types of variables are:  1. Boolean
+2. Character (surrounded by single quotes '')/ String (surrounded by double quotes "")
+3. Integer (short, long, signed, unsigned) 
+4. Floating-point types (float, double, long double)
 
 Now, in order to name a variable, called the **identifier**, the following rules must be followed:
 1. The name must start with a letter or underscore _
@@ -52,7 +55,7 @@ int main() {
 char test = 'a';
 ```
 
-**Boolean**
+**Boolean**    
 Only ever true or false. With integers, 0 is false and 1 or any non-zero value is true.
 ```
 bool a = false;
@@ -60,14 +63,14 @@ bool b = true;
 
 ```
 
-**Integer**
+**Integer**   
 Signed integers can hold both positive and negative values, meanwhile, unsigned integers can only hold positive values. Short types have half of the default size and long have twice the default size.
 ```
 int x = 47;
 unsigned long int y = 23;
 ```
 
-**Floating Point**
+**Floating Point**     
 These data types can hold a real number, like 420.0 -3.33 or 0.03324, and can have a varying number of digits before and after the decimal point. They are always signed - so unlike with ints that have to specify, floating point data types always have the capability to hold both positive and negative values.
 ```
 double temp = 4.21; //Double is 8 bytes long
