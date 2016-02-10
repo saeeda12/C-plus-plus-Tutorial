@@ -13,8 +13,8 @@ A **variable** reserves a memory location in your computer which represents and 
 
 The C++ compiler requires us to provide the data type for *each* variable declared. The four basic types of variables are:  
 - Boolean
-- Character (surrounded by single quotes '')/ String (surrounded by double quotes "")
-- Integer (surrounded by single quotes '')/ String (surrounded by double quotes "")
+- Character (surrounded by single quotes '') / String (surrounded by double quotes "")
+- Integer (short, long, signed, unsigned)
 - Floating point (float, double, long double)
 
 Now, in order to name a variable, called the **identifier**, the following rules must be followed:   
