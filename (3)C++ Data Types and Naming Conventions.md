@@ -24,9 +24,9 @@ Now, in order to name a variable, called the **identifier**, the following rules
 - You can't use any keywords as variable names (such as int, string, etc.)   
 - C++ *is* case-sensitive (`num` is different from `Num`)
 
-  Beyond these base rules, you should keep in mind that identifiers should be descriptive, practical, and useful to its purpose in your program. Variable names are usually, in best practice, all lowercase, but camel case (i.e. variableName) or Pascal case (i.e. VariableName) can be used for multiple word names; these rules are enforced by programmers, to make variable names easier to read and understand. Also, do not start your identifiers with two underscores as they are often reserved for special system variables - this is enforced by the rules of C++ as it will throw an error.
+  Beyond these base rules, you should keep in mind that an identifier should be descriptive, practical, and useful to its purpose in your program. Variable names are usually, in best practice, all lowercase, but camel case (i.e. variableName) or Pascal case (i.e. VariableName) are used for multiple word names; these rules are enforced by programmers, to make variable names easier to read and understand (especially when debugging!). Also, do *not* start your identifiers with two underscores as that is often reserved for special system variables - this is enforced by the rules of C++ as it will throw an error.
 
-The syntax for declaring variables is `variable_type identifier;`. Make sure your statements always end in a semicolon!
+The syntax for declaring variables is `variable_type identifier;`. **Make sure your statements always end in a semicolon!**
 ```
 int x;
 ```
@@ -95,7 +95,7 @@ b[2] = 24;  //Assigns the value of 42 to the third element in the array b - 62 i
 **Hash**
 
 
-It is important to note the data types that can be manipulated together. For example, you cannot add a char type to an int: `x = "5" + 6;` because you have to define the variable, so if it is now `int x = "5" + 6;` it still cannot be even compiled because it throws the error that adding 'int' to a string does append to the string, and it gives the same error if I assign x to a char data type.
+It is important to note the data types that can be manipulated together. For example, you cannot add a char type to an int: `x = '5' + 6;` because you have to define the variable, so if it is now `int x = '5' + 6;` it still cannot be even compiled because it throws the error that adding 'int' to a string does append to the string, and it gives the same error if I assign x to a char data type.
 
 Can you/ can you not add ints and floats, etc. ? 
 
