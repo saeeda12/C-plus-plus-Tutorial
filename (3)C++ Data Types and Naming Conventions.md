@@ -91,13 +91,13 @@ float cel = 32.2; //Float is 4 bytes long
 **Arrays**   
 They are used to hold a set of data of the same type, and can store any data type.
 ```
-int myArr[5];   //Declare the type, int, and size, 5, of the array, a
-int myArr[5] = {12, 47, 66, 71, 84};    //Initialize the array a, with five integers inside the braces
+int myArr[5]; //Declare the type, int, and size, 5, of the array, a
+int myArr[5] = {12, 47, 66, 71, 84};  //Initialize the array a, with five integers inside the braces
 
-int b[] = {11, 45, 62, 70, 88};    //Without initializing the size, the array is created just big enough to hold the values
+int b[] = {11, 45, 62, 70, 88}; //Without initializing the size, the array is created just big enough to hold the values
 
-cout<< b[0]<< endl;   //Outputs 11, as 11 is the 0th index of array b. Index in arrays always starts at 0.
-b[2] = 24;    //Assigns the value of 42 to the third element in the array b - 62 is now 42
+cout<< b[0]<< endl; //Outputs 11, as 11 is the 0th index of array b. Index in arrays always starts at 0.
+b[2] = 24;  //Assigns the value of 42 to the third element in the array b - 62 is now 42
 ```
 
 **Hash**   
@@ -128,7 +128,7 @@ Sources: http://www.cplusplus.com/reference/functional/hash/ and http://en.cppre
 It is important to learn which data types can and cannot be manipulated together. For example, you cannot add a char type to an int: `x = '5' + 6;` because you have to define the variable, so if it is now `int x = '5' + 6;` it still cannot be even compiled because it throws the error that adding 'int' to a string does append to the string, and it gives the same error if I assign x to a char data type.
 
 ####How do type conversions work in C++?
-Type conversion is theprocess of converting a value from one data type to another. In **implicit/automatic type conversion, or coercion**, the compiler automatically transforms one fundamental data type into another.     
+A type conversion is the process of converting a value from one data type to another. In **implicit/automatic type conversion, or coercion**, the compiler automatically transforms one fundamental data type into another.     
 
 A **numeric promotion** is when a value from one type is converted into a value of a larger *similar* data type; also called **widening**, though this term is usually reserved for integers. This type conversion is safe, and never results in the loss of data or precision. For example, an int can be widened into a long, or a float promoted into a double:   
 ```
