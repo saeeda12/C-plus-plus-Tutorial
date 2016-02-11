@@ -67,10 +67,13 @@ bool b = true;
 ```
 
 **Integer**   
-Signed integers can hold both positive and negative values, meanwhile, unsigned integers can only hold positive values. Short types have half of the default size and long have twice the default size.
+Signed integers can hold both positive and negative values, meanwhile, unsigned integers can only hold positive values. Short types have half of the default size (2 bytes) and long is slightly larger than ints which are 4 bytes - however, it has become convention to define `int` and `long` to be the same size on standard computers (Lee, Chapter 2, page 33).
 ```
 int x = 47;
-unsigned long int y = 23;
+
+unsigned long int y = 23056;
+is the same as
+unsigned long y = 23056;
 ```
 
 **Floating Point**     
