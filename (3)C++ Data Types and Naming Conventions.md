@@ -42,11 +42,11 @@ int x = 5;
 
 ####Creating variables in C++
 
-**String**
+**String**    
+You must include the `<string>` library to use strings; otherwise, `<iostream>` works and is preferred as it includes the `<string>` library.
 ```
-#include <string> //<string> library to use strings; otherwise, <iostream> works as it includes the <string> library
+#include <string> 
 using namespace std;
-
 int main() {
   string test = "I'm learning C++";
   return 0;
@@ -72,8 +72,13 @@ Signed integers can hold both positive and negative values, meanwhile, unsigned 
 int x = 47;
 
 unsigned long int y = 23056;
-is the same as
+ is the same as
 unsigned long y = 23056;
+```    
+Because `unsigned long int` can get cumbersome to write, you can use **typedef** to shorten the data type name.
+```
+typedef unsigned long int ulong;
+ulong radius = 476;
 ```
 
 **Floating Point**     
@@ -86,19 +91,21 @@ float cel = 32.2; //Float is 4 bytes long
 **Arrays**   
 They are used to store a collection of variables of the same type.
 ```
-int myArr[5]; //Declare the type, int, and size, 5, of the array, a
-int myArr[5] = {12, 47, 66, 71, 84}; //Initialize the array a, with five integers inside the braces
+int myArr[5];   //Declare the type, int, and size, 5, of the array, a
+int myArr[5] = {12, 47, 66, 71, 84};    //Initialize the array a, with five integers inside the braces
 
-int b[] = {11, 45, 62, 70, 88}; //Without initializing the size, the array is created just big enough to hold the values
+int b[] = {11, 45, 62, 70, 88};    //Without initializing the size, the array is created just big enough to hold the values
 
-cout<< b[0]<< endl; //Outputs 11, as 11 is the 0th index of array b. Index in arrays always starts at 0.
-b[2] = 24;  //Assigns the value of 42 to the third element in the array b - 62 is now 42
+cout<< b[0]<< endl;   //Outputs 11, as 11 is the 0th index of array b. Index in arrays always starts at 0.
+b[2] = 24;    //Assigns the value of 42 to the third element in the array b - 62 is now 42
 ```
 
 **Hash**
+```
 
+```
 
-It is important to note the data types that can be manipulated together. For example, you cannot add a char type to an int: `x = '5' + 6;` because you have to define the variable, so if it is now `int x = '5' + 6;` it still cannot be even compiled because it throws the error that adding 'int' to a string does append to the string, and it gives the same error if I assign x to a char data type.
+It is important to learn which data types can and cannot be manipulated together. For example, you cannot add a char type to an int: `x = '5' + 6;` because you have to define the variable, so if it is now `int x = '5' + 6;` it still cannot be even compiled because it throws the error that adding 'int' to a string does append to the string, and it gives the same error if I assign x to a char data type.
 
 Can you/ can you not add ints and floats, etc. ? 
 
