@@ -153,12 +153,12 @@ float f = (float)i1 / i2;
 ```
 In the above program, we use a float cast to tell the compiler to promote i1 to a floating point value. Because i1 is a floating point value, i2 will then be promoted to a floating point value as well, and the division will be done using floating point division instead of integer division! C-style casts should generally be avoided because they are not checked by the compiler at compile time!
 
-A **static Cast** casting operator, is called static_cast. You’ve previously seen static_cast used to convert a char into an int so that std::cout prints it as an integer instead of a char:
+A **static cast** casting operator is called static_cast. It is used to convert a char into an int so that std::cout prints it as an integer instead of a char:
 ```
 char c = 97;
 std::cout << static_cast<int>(c) << std::endl; // prints 97, not 'a'
 ```
-Static_cast is best used to convert one fundamental type into another.
+static_cast is best used to convert one fundamental type into another.
 ```
 int i1 = 10;
 int i2 = 4;
