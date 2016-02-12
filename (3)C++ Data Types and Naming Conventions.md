@@ -101,7 +101,7 @@ b[2] = 24;  //Assigns the value of 42 to the third element in the array b - 62 i
 ```
 
 **Hash**   
-A hash table is implemented as an array of linked lists - kind of like a multidimensional array. In a two-dimensional array, for instance, the elements consist of rows of a fixed length. In a hash table, however, the elements (buckets) can expand or shrink to accommodate a virtually infinite number of table entries. A **hash function** decides where to store and retrieve items in a hash table. It takes in an item key as its parameter and returns an index location for that particular item, primarily with modulo arithmetic. **1)** It accepts a single parameter of type Key, **2)** returns a value of type size_t that represents the hash value of the parameter; **3)** for two parameters k1 and k2 that are equal, **4)** std::hash<Key>()(k1) == std::hash<Key>()(k2), while for two different parameters k1 and k2 that are not equal, the probability that std::hash<Key>()(k1) == std::hash<Key>()(k2) should be very small, approaching 1.0/std::numeric_limits<size_t>::max().
+A hash table is implemented as an array of linked lists - kind of like a multidimensional array. In a two-dimensional array, for instance, the elements consist of rows of a fixed length. In a hash table, however, the elements (buckets) can expand or shrink to accommodate a virtually infinite number of table entries. A **hash function** decides where to store and retrieve items in a hash table. It takes in an item key as its parameter and returns an index location for that particular item, primarily with modulo arithmetic. **(1)** It accepts a single parameter of type Key, **(2)** returns a value of type size_t that represents the hash value of the parameter; **(3)** for two parameters k1 and k2 that are equal, **(4)** std::hash<Key>()(k1) == std::hash<Key>()(k2), while for two different parameters k1 and k2 that are not equal, the probability that std::hash<Key>()(k1) == std::hash<Key>()(k2) should be very small, approaching 1.0/std::numeric_limits<size_t>::max().
 ```
 #include <iostream>
 #include <functional>
@@ -125,7 +125,7 @@ int main () {
 ```    
 Sources: http://www.cplusplus.com/reference/functional/hash/ and http://en.cppreference.com/w/cpp/utility/hash
 
-It is important to learn which data types can and cannot be manipulated together. For example, you cannot add a char type to an int: `x = '5' + 6;` because you have to define the variable, so if it is now `int x = '5' + 6;` it still cannot be even compiled because it throws the error that adding 'int' to a string does append to the string, and it gives the same error if I assign x to a char data type.
+It is important to learn which data types can and cannot be manipulated together. For example, you cannot add a char type to an int: `x = '5' + 6;` because you *have* to define the variable, so if it is now `int x = '5' + 6;` it still cannot be even compiled because it throws the error that adding 'int' to a string does append to the string, and it gives the same error if I assign x to a char data type. This is a limitation in C++, but can be done in Java.
 
 ####How do type conversions work in C++?
 A type conversion is the process of converting a value from one data type to another. In **implicit/automatic type conversion, or coercion**, the compiler automatically transforms one fundamental data type into another.     
