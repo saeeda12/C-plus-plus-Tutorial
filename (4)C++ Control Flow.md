@@ -34,7 +34,7 @@ if (clouds > 50)
 else
   cout<<"There aren't many clouds out today.";
 ```
-You can also use `else if` to provide other alternatives. Remember your semicolons at the end of statements!
+Although you technically don't need braces in the above examples, it is good practice (for readability and no ambiguity) to use them around the statements in your if/else conditions. You can also use `else if` to provide other alternatives. Remember your semicolons at the end of statements!
 ```
 int clouds = 40;
 if (clouds > 50)
@@ -54,6 +54,9 @@ if (clouds > 30 || clouds < 50)
 else
   cout<<"There aren't many clouds out today.";
 ```
+
+Remember when I mentioned braces can eliminate ambiguity in your if/else statements earlier? Well, this can solve a big problem that many people run into, called the *"dangling else."* The *"dangling else"* is a problem that occurs when you don't use braces with your conditional statements; if you have an if statement, nested inside an if statement, and then an else statement, and you did not use braces, it becomes ambiguous which if statement the else is associated with. C++, like Java, solves this problem by forcing the else to associate with the nearest preceeding if statment that does NOT cause a syntax error, and is not in a block (within braces). However, the best way to avoid issues like these is to simply use braces in your conditional statements so it is very clear what conditions go with what.
+
 The **conditional operator** is a way to write a simple piece of code in a simpler, more concise manner.
 ```
 if(x > y) {
