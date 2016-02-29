@@ -55,7 +55,27 @@ else
   cout<<"There aren't many clouds out today.";
 ```
 
-Remember when I mentioned braces can eliminate ambiguity in your if/else statements earlier? Well, this can solve a big problem that many people run into, called the *"dangling else."* The *"dangling else"* is a problem that occurs when you don't use braces with your conditional statements; if you have an if statement, nested inside an if statement, and then an else statement, and you did not use braces, it becomes ambiguous which if statement the else is associated with. C++, like Java, solves this problem by forcing the else to associate with the nearest preceeding if statment that does NOT cause a syntax error, and is not in a block (within braces). However, the best way to avoid issues like these is to simply use braces in your conditional statements so it is very clear what conditions go with what.
+Remember when I mentioned braces can eliminate ambiguity in your if/else statements earlier? Well, this can solve a big problem that many people run into, called the *dangling else*. The *dangling else* is a problem that occurs when you don't use braces with your conditional statements; if you have an if statement, nested inside an if statement, and then an else statement, and you did not use braces, it becomes ambiguous which if statement the else is associated with. C++, like Java, solves this problem by forcing the else to associate with the nearest preceeding if statment that does NOT cause a syntax error, and is not in a block (within braces). However, the best way to avoid issues like these is to simply use braces and indentation in your conditional statements so it is very clear what conditions go with what.
+```
+int clouds = 35;
+if (cloudy==false)
+if (clouds > 30 || clouds < 50)
+  cout<<"There are handful of clouds out today.";
+else  //DANGLING ELSE
+  cout<<"There aren't many clouds out today.";
+```
+C++ will read this *dangling else* with the second if statement. If that is what you want, write it correctly - as seen below:
+```
+int clouds = 35;
+bool cloudy(false);
+    if (cloudy==false) {
+        if (clouds > (30) || clouds < 50) {
+            cout<<"There are handful of clouds out today.\n";
+        } else {  //DANGLING ELSE
+            cout<<"There aren't many clouds out today.\n";
+        }
+    }
+```
 
 The **conditional operator** is a way to write a simple piece of code in a simpler, more concise manner.
 ```
