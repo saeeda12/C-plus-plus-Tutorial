@@ -188,6 +188,44 @@ cout<<"You have exited the switch statement.\n";
 ```
 
 
-#####Break and/or Continue Statements aka how can you exit loops
+#####Break and/or Continue Statements
+The `break` statement can also be used in `if-else` statements, to exit the loop. An example program is below:
+```
+#include <iostream>
+using namespace std;
+int main() {
+    int number, sum = 0;  // can declare and initialize multiple variables (of the same type) in one line
+
+    while (true) {     // will always be true
+        cout<<"Enter a number: ";
+        cin>>number;  // user input
+        
+        if (number != 0) {
+            sum += number;
+        }
+        else {
+            break;    // terminates the loop if number = 0
+        }
+
+    }
+    cout<<"Sum = "<<sum;
+    return 0;
+}
+```  
+The `continue` statement is used to skip certain conditions in a loop. An example program is below:
+```
+#include <iostream>
+using namespace std;
+int main() {
+    for (int i = 1; i <= 10; ++i) {
+        if ( i == 6 || i == 9) {
+            continue;  // causes the loop to skip printing out when i=6 and when i=9
+        }
+        cout<<i<<"\t";  // puts a tab between each number printed
+    }
+    return 0;
+}
+```
+Source: http://www.programiz.com/cpp-programming/break-continue
 
 
