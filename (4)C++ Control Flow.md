@@ -240,6 +240,6 @@ Source: http://www.programiz.com/cpp-programming/break-continue
 
 
 ####Note
-I have created a fopc.cpp file with all the loops and Flow of Program Control statements, and attached it to my repository. I have commented out all the statements, except the first one-condition if-else statement. You can download the file and try running them yourselves! Play around with the statements too!
+I have created a fopc.cpp file with all the loops and Flow of Program Control statements, and attached it to my repository. I have commented out all the statements, except the first one-condition if-else statement. You can download the file and try running it yourselves in your compiler! Play around with the statements too - see what works and what doesn't work!
 
 
