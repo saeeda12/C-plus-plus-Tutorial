@@ -75,7 +75,8 @@ bool cloudy(false);
             cout<<"There aren't many clouds out today.\n";
         }
     }
-```
+```   
+Source: http://www.mathcs.emory.edu/~cheung/Courses/561/Syllabus/2-C/dangling-else.html
 
 The **conditional operator** is a way to write a simple piece of code in a simpler, more concise manner.
 ```
