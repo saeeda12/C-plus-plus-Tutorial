@@ -158,7 +158,7 @@ switch(expression) {
     break;
 }
 ```
-The `break` keyword exits the nearest enclosing switch/ iteration statement, and is only used in switch/ iteration statements. Observe the following (sparse) menu example:
+The `break` keyword exits the nearest enclosing switch/ iteration statement, and is only used in switch/ iteration statements. C++ requires the `break` statement, otherwise, it will continue executing the statements in the following cases until it finds another `break;`. Observe the following (sparse) menu example:
 ```
 int menuChoice = 3;
 switch(menuChoice) {
@@ -199,7 +199,7 @@ cout<<"You have exited the switch statement.\n";
 
 
 #####Break and/or Continue Statements
-The `break` statement can also be used in `if-else` statements, to exit the loop. C++ requires the `break` statement, otherwise, it will continue executing the statements in the following cases until it finds another `break;`. An example program is below:
+The `break` statement can also be used in `if-else` statements, to exit the loop. An example program is below:
 ```
 #include <iostream>
 using namespace std;
@@ -240,6 +240,6 @@ Source: http://www.programiz.com/cpp-programming/break-continue
 
 
 ####Note
-I have created a .cpp file with all the loops and Flow of Program Control statements to my repository. I have commented out all the statements, except the first one-condition if-else statement. You can download the file and try running them yourselves! Play around with the statements too!
+I have created a fopc.cpp file with all the loops and Flow of Program Control statements, and attached it to my repository. I have commented out all the statements, except the first one-condition if-else statement. You can download the file and try running them yourselves! Play around with the statements too!
 
 
