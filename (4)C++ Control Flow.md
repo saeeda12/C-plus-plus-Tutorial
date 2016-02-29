@@ -95,7 +95,17 @@ condition ? expression1 : expression2
 z=(x>y) ? y : x
 ```
 
-Short-circuit evaluation? Dangling else?
+#####Short-circuit evaluation  
+Short-circuit evaluation or short-circuit logic, is when the compiler only evaluates the first condition in a multi-condition statement, if possible, like with the logical or || operator. This makes the compiler more efficient. Let's test if C++ uses short-circuit logic!
+```
+int clouds = 567;
+    if (clouds > 20 || clouds < 50) { 
+        cout<<"Short circuit.\n";
+    }
+    return 0;
+```
+This code prints out Short circuit, proving that the C++ compiler does indeed use short-circuit logic.
+
 
 #####Loops
 
@@ -189,7 +199,7 @@ cout<<"You have exited the switch statement.\n";
 
 
 #####Break and/or Continue Statements
-The `break` statement can also be used in `if-else` statements, to exit the loop. An example program is below:
+The `break` statement can also be used in `if-else` statements, to exit the loop. C++ requires the `break` statement, otherwise, it will continue executing the statements in the following cases until it finds another `break;`. An example program is below:
 ```
 #include <iostream>
 using namespace std;
@@ -227,5 +237,9 @@ int main() {
 }
 ```
 Source: http://www.programiz.com/cpp-programming/break-continue
+
+
+####Note
+I have created a .cpp file with all the loops and Flow of Program Control statements to my repository. I have commented out all the statements, except the first one-condition if-else statement. You can download the file and try running them yourselves! Play around with the statements too!
 
 
