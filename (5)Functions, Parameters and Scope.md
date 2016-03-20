@@ -64,12 +64,12 @@ int mult(int a, int b);
 int main(void) {
   using std::count;
   using std::cin;
-  int num1, num2;  // declare two integer variable in the same line
+  int num1, num2;  // Declare two integer variable in the same line
   cout << "Enter a number: ";
   cin >> num1;
   cout << "Enter another number: ";
   cin >> num2;
-  cout << "\n The product of these two numbers is: " << mult(num1, num2) << ". \n";  // a \n means a newline
+  cout << "\n The product of these two numbers is: " << mult(num1, num2) << ". \n";  // A \n means a newline
 }
 
 // Function definition
@@ -77,5 +77,9 @@ int mult(int a, int b) {
   return a * b;
 }
 ```
+You can place a function call inside a print statement, as seen in the last line of `main`.
+
+p. 92
+####Recursive Functions
 
 
