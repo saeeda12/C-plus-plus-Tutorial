@@ -106,3 +106,26 @@ int main() {  // Main
 In `main`, I created another `i` variable, which is local *only* to `main`, and will not interfere with the `int i` passed as an argument in `numbers`'s parameters. I set it to 0, and then called the function; I also could have called the function like `numbers(0);` starting `i` at 0, which is also valid and easier, but this is an important lesson about **variable scope** which we will learn about next. 
 
 
+####Scope
+There are four categories of where variables can be accessed based on where they are declared. They include: inside the `main` function, in another function, in a block of code (i.e. loops, anything within {}), and in code outside functions. 
+
+1. If a variable is declared outside a function - outside any block of code - it is considered a **global variable**. Its scope and lifetime (how long the variable lasts) are from the declaration to the end of the source file. 
+2. If a variable is declared within a block of code, it is considered a **local variable** and its scope and lifetime are confined to within the code block.
+3. If a variable is declared within the argument_list of a function declaration/ definition, it is called a **parameter**, and its scope and lifetime are until the end of the function. 
+
+**Note:** Functions cannot access variable declared within the `main` function unless the variables are passed as arguments to the function. Also, if a variable is declared within a code block that is nested inside another code block, the scope of the variable is restricted to the inner code block.
+
+Now, in C++ a **global** variable and a **local** variable can have the same name, which can cause some confusion. But, all operations performed on the variable are actually performed on the local variable - the local variable is said to *shadow* the global variable. If you want to use the global variable, use the **scope resolution operator** (:: before the variable), seen below:
+
+```
+int x;
+
+int main(void) {
+  int x;
+  ::x = 10;  // Scope resolution operator
+  return;
+}
+```
+The best practice is to give all of your variables different names!
+
+
