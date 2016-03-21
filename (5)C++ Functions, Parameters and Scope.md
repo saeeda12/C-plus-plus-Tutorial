@@ -115,7 +115,7 @@ There are four categories of where variables can be accessed based on where they
 
 **Note:** Functions cannot access variable declared within the `main` function unless the variables are passed as arguments to the function. Also, if a variable is declared within a code block that is nested inside another code block, the scope of the variable is restricted to the inner code block.
 
-Now, in C++ a **global** variable and a **local** variable can have the same name, which can cause some confusion. But, all operations performed on the variable are actually performed on the local variable - the local variable is said to *shadow* the global variable. If you want to use the global variable, use the **scope resolution operator** (:: before the variable), seen below:
+Now, in C++ a **global variable** and a **local variable** can have the same name, which can cause some confusion because all operations performed on the variable are actually performed on the local variable; thus, the local variable is said to *shadow* the global variable. If you want to use the global variable, use the **scope resolution operator** (::) before the variable, as seen below:
 
 ```
 int x;
@@ -127,5 +127,8 @@ int main(void) {
 }
 ```
 The best practice is to give all of your variables different names!
+
+
+Variables passed by reference or value?
 
 
