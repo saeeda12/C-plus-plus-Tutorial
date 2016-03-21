@@ -82,4 +82,27 @@ You can place a function call inside a print statement, as seen in the last line
 p. 92
 ####Recursive Functions
 
+**Recursion** is when a function calls itself inside its own function definition. 
+
+The program below (with the function definition at the beginning) demonstrates a recursive function, called `numbers`, which increments the `int` number so long as it is less than 9, and prints the number with every increment. In this program, we used recursion, as opposed to writing a `for` loop. 
+```
+#include <iostream>
+using namespace std;
+
+int numbers(int i) {  // Function
+  cout << "Number: " << i << endl;
+  i++;
+  if(i<9) {
+    numbers(i);  // Recursion!
+  }
+  return i;
+}
+
+int main() {  // Main
+  int i = 0;
+  numbers(i);  // Function call
+}
+```
+In `main`, I created another `i` variable, which is local *only* to `main`, and will not interfere with the `int i` passed as an argument in `numbers`'s parameters. I set it to 0, and then called the function; I also could have called the function like `numbers(0);` starting `i` at 0, which is also valid and easier, but this is an important lesson about **variable scope** which we will learn about next. 
+
 
