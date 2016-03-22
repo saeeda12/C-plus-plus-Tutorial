@@ -132,7 +132,7 @@ Nevertheless, the best practice is to give all of your variables different names
 ####Passed by Reference or Value?
 One of the major disadvantages of pass by value is that all arguments passed by value are copied into the function parameters. When the arguments are large structs or classes, this can take a lot of time. Passing by reference solves these issues: when an argument is passed by reference, a reference is created to the actual argument (which takes minimal time) and no copying of values takes place, and you can pass large structs and classes with a small performance penalty.
 
-In C++, variables can be passed by reference, using the `&` notation in front of the variable name. `value` is a reference variable.
+In C++, variables can be **passed by reference**, using the `&` notation in front of the variable name. `value` is a reference variable.
 ```
 void ref(int &value) {  // Reference value variable
   value = 4;
@@ -159,23 +159,55 @@ void ref(const int &value) {  // const reference
 ```
 Using a **const reference** doesn't allow the variable being referenced to be changed through the reference, so if used, the function will not change the argument!
 
-You can also use **reference parameters* to return multiple values, even though functions can only have one return value. Observe the same program used above, but tweaked:
+You can also use **reference parameters** to return multiple values, even though functions can only have one return value. Observe the same program used above, but tweaked:
 ```
-void ref(int &x, int &y) {  // Reference value variable
+void ref(int &x, int &y, int z) {  // Two reference value variables, One pass by value variable
   x = 4 * 7;
   y = 9;
+  z *= x + y;
 }
  
 int main() {
   int x = 5;  // New variable
   int y = 10;  // New variable
  
-  ref(x, y);  // Returns x and y 
+  ref(x, y, 11);  // Returns 11*(5+10)
  
   cout << "x = " << x << "\n";
   cout << "y = " << y << "\n";
+  cout << "z = " << z << "\n";
   return 0;
 }
 ```
+Actually calling the function, with any reference variables, and any pass by value variables in the parameters will return multiple values.
+
+#####Assignments
+
+If I run the following code in my compiler: 
+```
+#include <iostream>
+#include <string>
+
+#include <stdio.h>  //to use
+#include <string.h> // memcpy
+using namespace std;
+
+int main() {
+  
+  char a[] = {'c','a','t'};
+  char b[] = {'d','o','g'};
+  memcpy(a, b, sizeof(a));
+  b[1] = 'u';
+  cout << "a: " << a << "\n";
+  cout << "b: " << b << "\n";
+}
+```
+It successfully changes the value of the char array a to that of b, but only using memcpy. It gave an error if I tried to set a to b using `a = b;`. 
+```
+//Output:
+dog
+dug
+```
+Although I changed a to b, when I printed a, it did not register the change I made in this line: `b[1] = 'u';` - only array b showed the update, when printed.
 
 
