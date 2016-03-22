@@ -27,7 +27,7 @@ int mult(int a, int b) {
   return int;
 }
 ```
-We don't need a semicolon at the end of the function declaration because we are also defining it. Because our function returns a value of type `int`, it must have a return statement that returns a value of the same `return_type`, whereupon the functions terminates. Void functions can have a simple `return;` statement at the end of the function that does not return anything, but it is not required. In the code inside the function, it is best to put any variable declarations at the beginning of the code block - it is easiest to find that way.
+We don't need a semicolon at the end of the function declaration because we are also defining it. Because our function returns a value of type `int`, it must have a return statement that returns a value of the same `return_type`, whereupon the functions terminates. Void functions can have a simple `return;` or `return 0;` statement at the end of the function that does not return anything, but it is not required. In the code inside the function, it is best to put any variable declarations at the beginning of the code block - it is easiest to find that way.
 
 The `mult` function's definition is below. It simply returns the product of `a` and `b`. 
 ```
@@ -115,20 +115,67 @@ There are four categories of where variables can be accessed based on where they
 
 **Note:** Functions cannot access variable declared within the `main` function unless the variables are passed as arguments to the function. Also, if a variable is declared within a code block that is nested inside another code block, the scope of the variable is restricted to the inner code block.
 
-Now, in C++ a **global variable** and a **local variable** can have the same name, which can cause some confusion because all operations performed on the variable are actually performed on the local variable; thus, the local variable is said to *shadow* the global variable. If you want to use the global variable, use the **scope resolution operator** (::) before the variable, as seen below:
+Now, in C++, **global variables** and **local variables** can have the same name, which can cause some confusion because all operations performed on the variable will actually be performed on the local variable; thus, the local variable is said to *shadow* the global variable. If you want to use the global variable only, use the **scope resolution operator** (::) before the variable, as seen below:
 
 ```
-int x;
+int x;  // Global variable
 
 int main(void) {
-  int x;
-  ::x = 10;  // Scope resolution operator
+  int x;  // Local variable
+  ::x = 10;  // Scope resolution operator, references the global variable
   return;
 }
 ```
-The best practice is to give all of your variables different names!
+Nevertheless, the best practice is to give all of your variables different names!
 
 
-Variables passed by reference or value?
+####Passed by Reference or Value?
+One of the major disadvantages of pass by value is that all arguments passed by value are copied into the function parameters. When the arguments are large structs or classes, this can take a lot of time. Passing by reference solves these issues: when an argument is passed by reference, a reference is created to the actual argument (which takes minimal time) and no copying of values takes place, and you can pass large structs and classes with a small performance penalty.
+
+In C++, variables can be passed by reference, using the `&` notation in front of the variable name. `value` is a reference variable.
+```
+void ref(int &value) {  // Reference value variable
+  value = 4;
+}
+ 
+int main() {
+  int value = 5;  // New function, new variable
+ 
+  cout << "value = " << value << "\n";
+  
+  ref(value);  // Function call
+  
+  cout << "value = " << value << "\n";
+  return 0;
+}
+```
+This program will output `value = 5` and `value = 4`, because we specified that the function parameters are references rather than a normal variables. After the function call, the value of `value` changed to what is declared in the function `ref`. A reference to a variable is treated exactly the same as a variable itself, so any changes made to the reference are passed through to the argument!
+
+But wait! References allow the function to change the value(s) of its argument(s), which can be bad! If we don't want a function to change the value of its argument and also don’t want to pass by value, you can pass by **const reference**.
+```
+void ref(const int &value) {  // const reference
+  value = 4; // Cannot do this now!
+}
+```
+Using a **const reference** doesn't allow the variable being referenced to be changed through the reference, so if used, the function will not change the argument!
+
+You can also use **reference parameters* to return multiple values, even though functions can only have one return value. Observe the same program used above, but tweaked:
+```
+void ref(int &x, int &y) {  // Reference value variable
+  x = 4 * 7;
+  y = 9;
+}
+ 
+int main() {
+  int x = 5;  // New variable
+  int y = 10;  // New variable
+ 
+  ref(x, y);  // Returns x and y 
+ 
+  cout << "x = " << x << "\n";
+  cout << "y = " << y << "\n";
+  return 0;
+}
+```
 
 
