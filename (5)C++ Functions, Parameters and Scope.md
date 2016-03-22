@@ -79,7 +79,7 @@ int mult(int a, int b) {
 ```
 You can place a function call inside a print statement, as seen in the last line of `main`.
 
-p. 92
+
 ####Recursive Functions
 
 **Recursion** is when a function calls itself inside its own function definition. 
@@ -204,7 +204,7 @@ int main() {
   cout << "b: " << b << "\n";
 }
 ```
-It successfully changes the value of the char array a to that of b, but only using memcpy. It gave an error if I tried to set a to b using `a = b;`. 
+It successfully changes the value of the char array a to that of b, but only using `memcpy`. It gave an error if I tried to set a to b using `a = b;`. 
 ```
 Output:
 
