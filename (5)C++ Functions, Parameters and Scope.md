@@ -130,9 +130,9 @@ Nevertheless, the best practice is to give all of your variables different names
 
 
 ####Passed by Reference or Value?
-One of the major disadvantages of pass by value is that all arguments passed by value are copied into the function parameters. When the arguments are large structs or classes, this can take a lot of time. Passing by reference solves these issues: when an argument is passed by reference, a reference is created to the actual argument (which takes minimal time) and no copying of values takes place, and you can pass large structs and classes with a small performance penalty.
+In **pass by value**, the local parameters are copies of the original arguments passed in, and changes made in the function to these variables do not affect the original variables. In **pass by reference**, the local parameters are references to the storage locations of the original arguments passed in, changes made to these variables in the function do affect the original variables, and no copy is made so the overhead (time, storage) is saved.
 
-In C++, variables can be **passed by reference**, using the `&` notation in front of the variable name. `value` is a reference variable.
+In C++, variables can be **passed by reference**, using the `&` unary operator in front of the variable name. `value` is a reference variable.
 ```
 void ref(int &value) {  // Reference value variable
   value = 4;
@@ -181,6 +181,8 @@ int main() {
 ```
 Actually calling the function, with any reference variables, and any pass by value variables in the parameters will return multiple values.
 
+Source: https://www.cs.fsu.edu/~myers/c++/notes/references.html
+
 #####Assignments
 
 If I run the following code in my compiler: 
@@ -204,9 +206,10 @@ int main() {
 ```
 It successfully changes the value of the char array a to that of b, but only using memcpy. It gave an error if I tried to set a to b using `a = b;`. 
 ```
-//Output:
-dog
-dug
+Output:
+
+a: dog
+b: dug
 ```
 Although I changed a to b, when I printed a, it did not register the change I made in this line: `b[1] = 'u';` - only array b showed the update, when printed.
 
