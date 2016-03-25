@@ -27,7 +27,7 @@ int mult(int a, int b) {
   return int;
 }
 ```
-We don't need a semicolon at the end of the function declaration because we are also defining it. Because our function returns a value of type `int`, it must have a return statement that returns a value of the same `return_type`, whereupon the functions terminates. Void functions can have a simple `return;` or `return 0;` statement at the end of the function that does not return anything, but it is not required. In the code inside the function, it is best to put any variable declarations at the beginning of the code block - it is easiest to find that way.
+We don't need a semicolon at the end of the function declaration because we are also defining it. Because our function returns a value of type `int`, it must have a return statement that returns a value of the same `return_type`, whereupon the functions terminates. Void functions can have a simple `return;` or `return 0;` statement at the end of the function that does not return anything, but it is not required. Xcode requires that you write `return = 0`, so that is what I will do, but your compiler might not require that. In the code inside the function, it is best to put any variable declarations at the beginning of the code block - it is easiest to find that way.
 
 The `mult` function's definition is below. It simply returns the product of `a` and `b`. 
 ```
@@ -123,33 +123,89 @@ int x;  // Global variable
 int main(void) {
   int x;  // Local variable
   ::x = 10;  // Scope resolution operator, references the global variable
-  return;
+  return = 0;
 }
 ```
 Nevertheless, the best practice is to give all of your variables different names!
 
 
 ####Passed by Reference or Value?
-In **pass by value**, the local parameters are copies of the original arguments passed in, and changes made in the function to these variables do not affect the original variables. In **pass by reference**, the local parameters are references to the storage locations of the original arguments passed in, changes made to these variables in the function do affect the original variables, and no copy is made so the overhead (time, storage) is saved.
+In **pass by value**, the local parameters are copies of the original arguments passed in, and changes made in the function to these variables do not affect the original variables. In **pass by reference**, the local parameters are references to the storage locations of the original arguments passed in, and changes made to these variables in the function do affect the original variables, and no copy is made so the overhead (time, storage) is saved.
 
-In C++, variables can be **passed by reference**, using the `&` unary operator in front of the variable name. `value` is a reference variable.
+The programs below test if C++ is passed by value or reference.
+
 ```
-void ref(int &value) {  // Reference value variable
-  value = 4;
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void func(int x) {
+    x = 9*7;
 }
- 
+int main(){
+    int a = 40;
+    func(a);
+    cout<<"a = "<< a << "\n";
+    return 0;
+}
+```
+Output:
+```
+a = 40
+```
+Another example program to test if C++ is pass by value or reference:
+```
+#include <iostream>
+#include <string>
+using namespace std;
+
 int main() {
-  int value = 5;  // New function, new variable
- 
-  cout << "value = " << value << "\n";
-  
-  ref(value);  // Function call
-  
-  cout << "value = " << value << "\n";
-  return 0;
+    int x = 5;  // New function, new variable
+    double y = 10;
+    
+    cout << "x = " << x << "\n";  // Value of x
+    
+    x = y;
+    cout << "Set value of y to x to test if C++ is a pass by reference language \n";
+    
+    cout << "x = " << x << "\n";  // Print x to see if the value changed to the value of y
+    
+    y = 3*4;
+    
+    cout << "x = " << x <<"\n";
+    
+    return 0;
 }
 ```
-This program will output `value = 5` and `value = 4`, because we specified that the function parameters are references rather than a normal variables. After the function call, the value of `value` changed to what is declared in the function `ref`. A reference to a variable is treated exactly the same as a variable itself, so any changes made to the reference are passed through to the argument!
+Output:
+```
+x = 5
+Set value of y to x to test if C++ is a pass by reference language 
+x = 10
+x = 10
+```
+Because the value of x did not change when I set y to 3*4, even though I set x to y, variables in C++ are pass by value. And in the first program, it did not affect the value of a when I called `func(a)` on it, a stayed 40, as instantiated in main.
+**Verdict:** C++ is pass by value.
+
+However, variables *can* be specifically **passed by reference**, using the `&` unary operator in front of the variable name. Using the same program from the first pass by value/reference test, I will make `x` into a reference variable.
+```
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void func(int &x) {  // Reference variable
+    x = 9*7;
+}
+int main(){
+    int a = 40;
+    func(a);
+    cout<<"a = "<< a << "\n";
+    return 0;
+}
+```
+This program will output `a = 63`, because we specified that the function parameter is a reference rather than a normal variable. After the function call, the value of `a` changed to what is declared in the function, `func`. A reference to a variable is treated exactly the same as a variable itself, so any changes made to the reference are passed through to the argument!
 
 But wait! References allow the function to change the value(s) of its argument(s), which can be bad! If we don't want a function to change the value of its argument and also don’t want to pass by value, you can pass by **const reference**.
 ```
@@ -161,25 +217,36 @@ Using a **const reference** doesn't allow the variable being referenced to be ch
 
 You can also use **reference parameters** to return multiple values, even though functions can only have one return value. Observe the same program used above, but tweaked:
 ```
-void ref(int &x, int &y, int z) {  // Two reference value variables, One pass by value variable
-  x = 4 * 7;
-  y = 9;
-  z *= x + y;
+#include <iostream>
+#include <string>
+using namespace std;
+
+void ref(int &x, int &y, int z) {  // 2 reference value variables, 1 pass by value variable
+    x = 4 * 7;
+    y = 9;
+    z *= x + y;
 }
- 
+
 int main() {
-  int x = 5;  // New variable
-  int y = 10;  // New variable
- 
-  ref(x, y, 11);  // Returns 11*(5+10)
- 
-  cout << "x = " << x << "\n";
-  cout << "y = " << y << "\n";
-  cout << "z = " << z << "\n";
-  return 0;
-}
+    int x = 5;  // New variable
+    int y = 10;  // New variable
+    int z = 7;  // New variable
+    
+    ref(x, y, z);
+    
+    cout << "x = " << x << "\n";
+    cout << "y = " << y << "\n";
+    cout << "z = " << z << "\n";
+   
 ```
-Actually calling the function, with any reference variables, and any pass by value variables in the parameters will return multiple values.
+Output:
+```
+x = 28
+y = 9
+z = 7  // If we had passed in z as a reference variable (&z), this would have read z = 259
+```
+
+Actually, calling the function with multiple reference or pass by value variables in the parameters will return multiple values.
 
 Source: https://www.cs.fsu.edu/~myers/c++/notes/references.html
 
@@ -198,19 +265,45 @@ int main() {
   
   char a[] = {'c','a','t'};
   char b[] = {'d','o','g'};
-  memcpy(a, b, sizeof(a));
+  a = b;  // ERROR
   b[1] = 'u';
   cout << "a: " << a << "\n";
   cout << "b: " << b << "\n";
 }
 ```
-It successfully changes the value of the char array a to that of b, but only using `memcpy`. It gave an error if I tried to set a to b using `a = b;`. 
+The compiler in Xcode gives an error when I try to set a to b using `a = b;`. It will say "array type char[3] is not assignable." Arrays cannot be assigned to one another in C++, unlike primitive data types like `int` or `string`. 
+
+However, I can assign the arrays to each other, and print them, using the following techniques.
+```
+#include <iostream>
+#include <algorithm>
+#include <array>
+
+using namespace std;
+
+int main() {
+    
+    std::array<char, 3> a = {'c', 'a', 't'};
+    std::array<char, 3> b = {'d', 'o', 'g'};
+    
+    a=b;
+    
+    b[1] = 'u';
+    
+    cout <<"a = " << a.data() << "\n";
+    cout <<"b = " << b.data() << "\n";
+    
+}
 ```
 Output:
-
-a: dog
-b: dug
 ```
-Although I changed a to b, when I printed a, it did not register the change I made in this line: `b[1] = 'u';` - only array b showed the update, when printed.
+a = dog
+b = dug
+```
+**std::array** is a cool alternative to built-in, fixed arrays, and it is memory efficient. Just keep note of the syntax difference.
+
+**Sources:** 
+http://www.learncpp.com/cpp-tutorial/6-15-an-introduction-to-stdarray/
+
 
 
