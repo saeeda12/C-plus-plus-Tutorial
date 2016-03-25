@@ -185,7 +185,8 @@ Set value of y to x to test if C++ is a pass by reference language
 x = 10
 x = 10
 ```
-Because the value of x did not change when I set y to 3*4, even though I set x to y, variables in C++ are pass by value. And in the first program, it did not affect the value of a when I called `func(a)` on it, a stayed 40, as instantiated in main.
+Because the value of x did not change when I set y to `3*4`, even though I set x to y, variables in C++ are pass by value. And in the first program, it did not affect the value of a when I called `func(a)` on it, a stayed 40, as instantiated in main.
+
 **Verdict:** C++ is pass by value.
 
 However, variables *can* be specifically **passed by reference**, using the `&` unary operator in front of the variable name. Using the same program from the first pass by value/reference test, I will make `x` into a reference variable.
@@ -205,7 +206,11 @@ int main(){
     return 0;
 }
 ```
-This program will output `a = 63`, because we specified that the function parameter is a reference rather than a normal variable. After the function call, the value of `a` changed to what is declared in the function, `func`. A reference to a variable is treated exactly the same as a variable itself, so any changes made to the reference are passed through to the argument!
+Output:
+```
+a = 63
+```
+This program outputs `a = 63` because we specified that the function parameter is a reference rather than a normal variable. After the function call, the value of `a` changed to what is declared in the function, `func`. A reference to a variable is treated exactly the same as a variable itself, so any changes made to the reference are passed through to the argument!
 
 But wait! References allow the function to change the value(s) of its argument(s), which can be bad! If we don't want a function to change the value of its argument and also don’t want to pass by value, you can pass by **const reference**.
 ```
@@ -250,7 +255,7 @@ Actually, calling the function with multiple reference or pass by value variable
 
 Source: https://www.cs.fsu.edu/~myers/c++/notes/references.html
 
-#####Assignments
+####Assignments
 
 If I run the following code in my compiler: 
 ```
@@ -283,10 +288,10 @@ using namespace std;
 
 int main() {
     
-    std::array<char, 3> a = {'c', 'a', 't'};
+    std::array<char, 3> a = {'c', 'a', 't'};  // Declare <type, size> then the array name
     std::array<char, 3> b = {'d', 'o', 'g'};
     
-    a=b;
+    a = b;  // This works!
     
     b[1] = 'u';
     
@@ -302,7 +307,7 @@ b = dug
 ```
 **std::array** is a cool alternative to built-in, fixed arrays, and it is memory efficient. Just keep note of the syntax difference.
 
-**Sources:** 
+**Source:** 
 http://www.learncpp.com/cpp-tutorial/6-15-an-introduction-to-stdarray/
 
 
