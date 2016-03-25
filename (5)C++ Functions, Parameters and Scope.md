@@ -57,25 +57,32 @@ A function must obviously be declared *or* defined before it can be called. If t
 // Multiplication program
 
 #include <iostream>
+using namespace std;
+using std::count;
+using std::cin;
 
 // Function declaration
 int mult(int a, int b);
 
-int main(void) {
-  using std::count;
-  using std::cin;
-  int num1, num2;  // Declare two integer variable in the same line
-  cout << "Enter a number: ";
-  cin >> num1;
-  cout << "Enter another number: ";
-  cin >> num2;
-  cout << "\n The product of these two numbers is: " << mult(num1, num2) << ". \n";  // A \n means a newline
+int main() {
+    int num1, num2;  // Declare two integer variable in the same line
+    cout << "Enter a number: ";
+    cin >> num1;
+    cout << "Enter another number: ";
+    cin >> num2;
+    cout << "The product of these two numbers is: " << mult(num1, num2) << "\n";  // A \n means a newline
 }
 
 // Function definition
 int mult(int a, int b) {
-  return a * b;
+    return a * b;
 }
+```
+Output:
+```
+Enter a number: 234
+Enter another number: 98
+The product of these two numbers is: 22932
 ```
 You can place a function call inside a print statement, as seen in the last line of `main`.
 
@@ -84,26 +91,35 @@ You can place a function call inside a print statement, as seen in the last line
 
 **Recursion** is when a function calls itself inside its own function definition. 
 
-The program below (with the function definition at the beginning) demonstrates a recursive function, called `numbers`, which increments the `int` number so long as it is less than 9, and prints the number with every increment. In this program, we used recursion, as opposed to writing a `for` loop. 
+The program below (with the function definition at the beginning) demonstrates a recursive function, called `numbers`, which increments the `int` number so long as it is less than 6, and prints the number with every increment. In this program, we used recursion, as opposed to writing a `for` loop. 
 ```
 #include <iostream>
 using namespace std;
 
 int numbers(int i) {  // Function
-  cout << "Number: " << i << endl;
-  i++;
-  if(i<9) {
-    numbers(i);  // Recursion!
-  }
-  return i;
+    cout << "Number: " << i << endl;
+    i++;
+    if(i<6) {
+        numbers(i);  // Recursion!
+    }
+    return i;
 }
 
 int main() {  // Main
-  int i = 0;
-  numbers(i);  // Function call
+    int i = 0;
+    numbers(i);  // Function call
 }
 ```
-In `main`, I created another `i` variable, which is local *only* to `main`, and will not interfere with the `int i` passed as an argument in `numbers`'s parameters. I set it to 0, and then called the function; I also could have called the function like `numbers(0);` starting `i` at 0, which is also valid and easier, but this is an important lesson about **variable scope** which we will learn about next. 
+Output:
+```
+Number: 0
+Number: 1
+Number: 2
+Number: 3
+Number: 4
+Number: 5
+```
+In `main`, I created another `i` variable, which is local *only* to `main`, and will not interfere with the `int i` passed as an argument in `numbers`'s parameters. I set it to 0, and then called the function `numbers`; I also could have called the function like `numbers(0);` starting `i` at 0, which is also valid and easier, but this is an important lesson about **variable scope** which we will learn about next. 
 
 
 ####Scope
@@ -187,7 +203,7 @@ x = 10
 ```
 Because the value of x did not change when I set y to `3*4`, even though I set x to y, variables in C++ are pass by value. And in the first program, it did not affect the value of a when I called `func(a)` on it, a stayed 40, as instantiated in main.
 
-**Verdict:** C++ is pass by value.
+**Verdict:** C++ is passed by value.
 
 However, variables *can* be specifically **passed by reference**, using the `&` unary operator in front of the variable name. Using the same program from the first pass by value/reference test, I will make `x` into a reference variable.
 ```
@@ -261,9 +277,6 @@ If I run the following code in my compiler:
 ```
 #include <iostream>
 #include <string>
-
-#include <stdio.h>  //to use
-#include <string.h> // memcpy
 using namespace std;
 
 int main() {
